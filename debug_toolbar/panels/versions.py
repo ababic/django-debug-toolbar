@@ -54,7 +54,7 @@ class VersionsPanel(Panel):
             if callable(get_version):
                 try:
                     return get_version()
-                except ValueError:
+                except TypeError:
                     pass
             else:
                 return get_version
