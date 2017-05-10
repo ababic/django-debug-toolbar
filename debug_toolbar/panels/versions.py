@@ -41,7 +41,7 @@ class VersionsPanel(Panel):
                 yield app.__name__, name, version
 
     def get_app_version(self, app):
-        version = self.get_version_from_app(self, app)
+        version = self.get_version_from_app(app)
         if isinstance(version, (list, tuple)):
             # We strip dots from the right because we do not want to show
             # trailing dots if there are empty elements in the list/tuple
